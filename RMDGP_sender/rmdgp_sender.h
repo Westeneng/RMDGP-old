@@ -4,7 +4,7 @@
  *  Created on: Mar 2, 2017
  *      Author: Gerald Westeneng
  *
- * This file is part of RMDGP.
+ * This file is part of RMDGP. Reliable Multicast DataGram Protocol
  *
  *  RMDGP is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,12 +20,19 @@
  *  along with RMDGP.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
+/*
+ * This is the interface of the RMDGP sender library
+ */
+
 #ifndef RMDGP_SENDER_H_
 #include <stddef.h>
 
+/* The object that represents a sender */
 typedef struct snd_obj_s *snd_obj;
 
 int rmdgp_s_create_sender(snd_obj *obj_p);
+int rmdgp_s_destroy_sender(snd_obj obj);
+
 int rmdgp_s_send(snd_obj obj, void *data, size_t len);
 
 #define RMDGP_SENDER_H_

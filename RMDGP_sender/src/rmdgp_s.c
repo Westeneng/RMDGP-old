@@ -19,8 +19,10 @@
  *  You should have received a copy of the GNU General Public License
  *  along with RMDGP.  If not, see <http://www.gnu.org/licenses/>. 
 */
-//#include <stdlib.h>
-#include "rmdgp_sender.h"
+#include <stdio.h>
+#include "../rmdgp_sender.h"
+
+
 
 struct snd_obj_s {
 	int sd;    // socket descriptor
@@ -28,7 +30,7 @@ struct snd_obj_s {
 
 int rmdgp_s_create_sender(snd_obj *obj_p)
 {
-
+	printf("rmdgp_s_create_sender\n");
 /*	sd = socket(AF_INET, SOCK_DGRAM, 0);
 	if(sd < 0)
 	{
@@ -39,7 +41,13 @@ int rmdgp_s_create_sender(snd_obj *obj_p)
 	return 0;
 }
 
+int rmdgp_s_destroy_sender(snd_obj obj)
+{
+
+}
+
 int rmdgp_s_send(snd_obj obj, void *data, size_t len)
 {
+	printf("rmdgp_s_create_sender\n");
 	return 0;
 }
