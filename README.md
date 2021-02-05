@@ -22,9 +22,10 @@ Reliable Multicast DataGram Protocol
 2. Create a direcotory where you want to build
 3. cd to the dir
 4. run cmake with the path to the root dir of your RMDGP git repo
-> *example*
+> *example:*  
 > cmake /home/username/code/RMDGP/
-> *or in case you want a debug build*
+>
+> *or in case you want a debug build:*  
 > cmake -DCMAKE_BUILD_TYPE=Debug /home/username/code/RMDGP/
 5. build the source with gmake
 > gmake -j10
